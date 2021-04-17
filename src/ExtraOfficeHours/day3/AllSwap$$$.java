@@ -23,17 +23,18 @@ allSwap(["ax", "bx", "ay", "by", "ai", "aj", "bx", "by"]) → ["ay", "by", "ax",
 
     public String[] allSwap(String[] strings) {
         Map<Character, Integer> map = new LinkedHashMap<>(); //helps to keep track of each
+            //  a        1
 
         for(int i = 0; i<strings.length; i++){
             char key = strings[i].charAt(0);
             if(!map.containsKey(key)){
-                map.put(key, i); //i = position to remember
+                map.put(key, i); //i = position to remember    put(a, ab)
             }else{
 
-                String temp = strings[i];
-                strings[i] = strings[map.get(key)];
-                strings[map.get(key)] = temp;
-                map.remove(key);
+                String temp = strings[i];               // temp = ac
+                strings[i] = strings[map.get(key)];      //i = ac
+                strings[map.get(key)] = temp;            // ab
+                map.remove(key);                        //remove because 2 switched
             }
         }
 

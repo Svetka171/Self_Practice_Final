@@ -1,6 +1,6 @@
 package InterviewCodingTask;
 
-public class fibonacci {
+public class fibonacci$$ {
     public static void main(String[] args) {
         //1 1 2 3 5 8..
         fib(8);

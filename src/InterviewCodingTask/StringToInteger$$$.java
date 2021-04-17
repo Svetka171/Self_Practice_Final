@@ -8,7 +8,7 @@ public class StringToInteger$$$ {
 
     public static int conv(String str){//126
         int result = 0;//6+20+100
-        int factorTo10=100;
+        int factorTo10=1;
 
         for(int i = str.length()-1; str.startsWith("-") ? i > 0 : i >= 0; i--){  // i=1
             char each = str.charAt(i);    //each = 1

@@ -1,6 +1,6 @@
 package InterviewCodingTask;
 
-public class SumOfIntegers {
+public class SumOfIntegers$$$ {
     public static void main(String[] args) {
         String str = "3a    bd 7";  //37
         System.out.println("sum(str) = " + sum(str));

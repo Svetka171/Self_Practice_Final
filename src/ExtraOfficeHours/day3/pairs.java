@@ -16,14 +16,14 @@ pairs(["code", "bug"]) → {"b": "g", "c": "e"}
 pairs(["man", "moon", "main"]) → {"m": "n"}
 pairs(["man", "moon", "good", "night"]) → {"g": "d", "m": "n", "n": "t"}
          */
-        String[] words = {"man", "moon", "main"};
+        String[] words = {"code", "bug"};
         System.out.println(pairs(words));
     }
     public static Map<String, String> pairs(String[] strings) {
         Map<String, String> result = new LinkedHashMap<>();
 
-        for(String each: strings){
-            result.put(each.substring(0,1), each.substring(each.length()-1));
+        for(String each: strings){           // code
+            result.put(each.substring(0,1), each.substring(each.length()-1));  //put(c,e)   //put(b,g)
         }
 
         return result;

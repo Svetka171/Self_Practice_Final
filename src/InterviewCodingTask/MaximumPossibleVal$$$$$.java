@@ -21,15 +21,15 @@ public class MaximumPossibleVal$$$$$ {
 
     public static int solution(int num) {
         String s = "" + Math.abs(num);   //  782                                          =7852
-        System.out.println(s);
+
         int max = Integer.valueOf(s + 5);    //   max = 7825
-        System.out.println("max   " + max);
+
+
         if (num > 0) {
             for (int i = 0; i < s.length(); i++) {    //    i=2
                 String c = "" + s.charAt(i);           //  c=2
                 String t = s.replaceFirst(c, 5 + c); //7852
-                System.out.println("c = " + c);
-                System.out.println("t " + t);
+
                 if (Integer.valueOf(t) > max) {       //
                     max = Integer.valueOf(t);
                 }

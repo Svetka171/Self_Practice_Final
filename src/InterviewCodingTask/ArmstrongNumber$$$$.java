@@ -8,16 +8,18 @@ public class ArmstrongNumber$$$$ {
     }
 
     public static boolean armNum(int num){
+        int power = (int)(Math.log10(num) +1);
         int a = 0;
         int b = 0;
-        int c = num;     //153    15
+        int c = num;
 
-        while(num>0){
-            a = num%10;             //  a=3       a = 5     1
-            num /= 10;              //  15.3      num = 1   0
-            b = b + (a * a * a);    // b = 0+(3*3*3) = 27    b = 27+ (5*5*5)   b= 152+(1*1*1)
+        while (num>0){
+
+            a = num%10; //3
+            num /= 10;
+            b +=  Math.pow(a, power );
         }
-        return (c==b)? true:false;   // true
+        return c==b;
     }
 
 

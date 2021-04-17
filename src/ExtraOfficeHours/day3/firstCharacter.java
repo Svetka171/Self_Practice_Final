@@ -21,12 +21,13 @@ firstChar([]) → {}
     }
     public static Map<String, String> firstChar(String[] strings) {
         Map<String, String> map = new LinkedHashMap<>();
-        for(String each: strings) {
-            String key = each.substring(0,1);
-            if(!map.containsKey(key)){
-                map.put(key, each);
+
+        for(String each: strings) {                //salt          //tea         //soda
+            String key = each.substring(0,1);      // s            //t           //s
+            if(!map.containsKey(key)){             //
+                map.put(key, each);                //put(s, salt)    put(t, tea)
             } else{
-                map.put(key, map.get(each) + each);
+                map.put(key, map.get(each) + each);                              //put(s, get(salt) + soda
             }
         }
 
